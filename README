@@ -1,0 +1,22 @@
+Introduction
+If you want to create any kind of on-line store, you will probably need a shopping cart.
+
+A shopping cart is basically a list that contains products selected by the user while he shops. When the user is finished shopping, he will usually examine the list to double-check that the items, quantities, and prices are correct. If he finds any errors he should be able to edit the list. Once he is ready, he should be able to check out. The checkout process involves an exchange of information that results in a sale.
+
+Sounds simple, right? And it actually is. The only challenge is performing the checkout, because that involves personal information and money. Fortunately, there are services that handle this type of transaction and you can leverage them. Some of the most popular are PayPal and Google Wallet.
+
+This article describes the implementation of a shopping cart using JavaScript. The cart uses PayPal and Google Wallet payment services. Adding other providers is fairly easy. If you have your own payment infrastructure for example, you can extend the shopping cart to use that in addition to the PayPal and Google Wallet options. Offering more payment options should increase sales.
+
+The repository includes a sample application called “Angular Store” that demonstrates how to use the shopping cart in AngularJS applications. 
+
+Shopping Cart Requirements
+When I started developing the shopping cart, I had the following requirements in mind:
+
+Must be 100% pure JavaScript (so it is easy to integrate into any site)
+Must follow the MVVM architecture (so it is easy to customize its look and feel)
+Must be safe (we don't want to be responsible for storing people's credit card numbers etc.)
+Must be fast and reliable (we don’t want users to give up before they checkout!)
+Must be flexible (it should allow payments to be processed using different services) 
+Must be extensible (adding new payment methods should be easy)
+Must be easy to use (because there's no reason for it to be complicated)
+I believe the “shoppingCart” class described below addresses all these requirements. It uses jQuery and integrates well with AngularJS applications. The “shoppingCart” class contains all the logic and provides the object model needed to create flexible and attractive views.
